@@ -1,0 +1,1 @@
+iglupkg fbp && cp out/*.xbps /opt/repo && xbps-rindex -fa /opt/repo/*.xbps && xbps-rindex --sign --signedby 'igluser <iglu@iglunix.org>' --privkey /opt/privkey.pem /opt/repo
