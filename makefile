@@ -3,5 +3,5 @@ main:
 
 install:
 	install -m 755 local-iglu $(DESTDIR)/usr/sbin/
-	install -d xbps.d $(DESTDIR)/etc/
+	install -d xbps.d/ $(DESTDIR)/etc/
 	install -m 600 privkey.pem $(DESTDIR)/opt/
