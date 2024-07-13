@@ -1,1 +1,8 @@
-iglupkg fbp && cp out/*.xbps /opt/repo && xbps-rindex -fa /opt/repo/*.xbps && xbps-rindex --sign --signedby 'igluser <iglu@iglunix.org>' --privkey /opt/privkey.pem /opt/repo
+!#/usr/bin/env mksh
+iglupkg fbp
+if [ ! -d /run/iglu ]; then
+	mkdir -p /run/iglu 
+fi
+cp out/*.xbps /run/iglu
+xbps-rindex -fa /run/iglu/*.xbps 
+xbps-rindex --sign --signedby 'igluser <iglu@iglunix.org>' --privkey /opt/privkey.pem /run/iglu
